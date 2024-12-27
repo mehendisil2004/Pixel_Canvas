@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+
+body {
+  background-image: url("assets/pixelbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  background-color: lavender;
+  width: 90vmin;
+  max-width: 500px;
+  position: relative;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 3px solid #3e346788;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  color: #5b5b5b;
+}
+
+span {
+  font-size: 1rem;
+  color: #5b5b5b;
+}
+
+.opt-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #C1C2D9; 
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #3b3b3b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #3e346788; 
+  transform: scale(1.05);
+  color: #3e3d3d;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 80px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 8px;
+  border: 3px solid #484747;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border-radius: 8px;
+  border: 3px solid #484747;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #3e346788; 
+  border-radius: 10px;
+  outline: none;
+  transition: background 0.3s ease;
+  padding: 7px;
+  margin: 10px 0px 10px 0px;
+}
+
+input[type="range"]:hover {
+  background: #3e346788; 
+}
+
+/* Chrome, Safari, Edge */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffffff; 
+  border: 2px solid #3e346788; 
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2); 
+  background: #3e346788; 
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 2px solid #3e346788;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  background: #3e346788;
+}
+
+/* Track Styling Firefox */
+input[type="range"]::-moz-range-track {
+  background: #3e346788;
+  height: 6px;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vmin;
+  width: 60vmin;
+  max-height: 400px;
+  max-width: 400px;
+  margin: 10px auto 10px auto;
+  background-color: #ffff;
+  border: 2px solid #C1C2D9;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gridRow {
+  display: flex;
+}
+
+.gridCol {
+  box-sizing: border-box;
+  border: 1px solid #c1c2d96b;
+}
+
+.top-buttons,
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.bottom-buttons {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 95vmin;
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .container {
+    height: 50vmin;
+    width: 50vmin;
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  label, span {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    height: 70vmin;
+    width: 70vmin;
+    max-height: 400px;
+    max-width: 400px;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  label, span {
+    font-size: 0.8rem;
+  }
+}
